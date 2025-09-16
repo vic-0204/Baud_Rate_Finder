@@ -36,6 +36,25 @@ Instead of guessing or testing multiple rates, this sketch compares measured tim
 3. Upload to your Arduino board.
 4. Connect your serial device and open the Serial Monitor to see the detected baud rate.
 
+## ⚡ Configuration
+
+You may need to adjust the following values depending on your hardware setup:
+
+```cpp
+#define PIN_RX 10       // The pin of your board that will be used for measurement
+const int numTransitions = 8;  // Number of signal edges to sample for measurement
+```
+1. PIN_RX → Which pin of your measuring board you want to use for capturing the signal (connect it to the TX of the device you want to measure).
+2. numTransitions → Increasing this number may improve accuracy.
+
+## ⚠️ Important Note
+
+For the baud rate to be measured correctly,  
+the device you want to analyze **must be actively transmitting data**.  
+
+If the device is idle (not sending anything), the tool will not detect the baud rate.  
+In this case, you need to make sure the device starts transmitting data (e.g., trigger a command, enable logging, or connect it to a system that requests data).  
+
 ## 📝 Usage Example
 ```cpp
 void loop() {
@@ -55,9 +74,23 @@ Estimated Baud Rate: 115200
 2. Timestamping – Each transition is recorded with micros().
 3. Bit Duration – The smallest interval (min_delta) is treated as the bit time.
 4. Baud Calculation – Estimated using:
-```
-baud = 1,000,000 / min_delta
+```cpp
+baud = 1 000 000 / min_delta
 ```
 
 5. Standard Matching – The calculated baud is mapped to the closest known rate.
 6. Output – The detected baud rate is printed to Serial Monitor.
+
+---
+
+## ☕ Support My Work
+
+If you enjoy my projects and want to support me, you can do so through the links below:
+
+[![Buy Me A Coffee](https://img.shields.io/badge/-Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/muki01)
+[![PayPal](https://img.shields.io/badge/-PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.com/donate/?hosted_button_id=SAAH5GHAH6T72)
+[![GitHub Sponsors](https://img.shields.io/badge/-Sponsor%20Me%20on%20GitHub-181717?style=for-the-badge&logo=github)](https://github.com/sponsors/muki01)
+
+📧 **Contact:** `muksin.muksin04@gmail.com`
+
+---
